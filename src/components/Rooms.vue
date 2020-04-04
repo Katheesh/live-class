@@ -4,12 +4,7 @@
     Live-Class
   </div>
   <ul class="sidebar-navigation">
-    <AddRoom /> 
-    <li>
-      <a @click="addClass()"> 
-        Add New Class
-      </a>
-    </li>  
+    <AddRoom />  
     <li class="header">Classes</li>
     <li v-for="room in rooms" v-bind:key="room.id" @click="showRoom(room.name)">
       <a href="#">
@@ -49,9 +44,6 @@ export default {
  methods: {
    showRoom(room) {
        EventBus.$emit('show_room', room);
-   },
-   addClass(){
-      alert("hello")
    }
  }
 

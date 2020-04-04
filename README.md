@@ -12,7 +12,7 @@ To run this project, you need to have:
 Clone the repository:
 
 ``` bash
- git clone 
+ git clone https://github.com/Katheesh/live-class.git
 ```
 
 cd into the project:
