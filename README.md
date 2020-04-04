@@ -7,7 +7,7 @@ To run this project, you need to have:
 - [Node.js](https://nodejs.org/) installed on your system
 - A server for generating a token. Clone and install it [here](https://github.com/Katheesh/live-class.git).
 
-## Setup
+## Setup Vue + Node Server
 
 Clone the repository:
 
@@ -17,7 +17,7 @@ Clone the repository:
 
 cd into the project:
 ``` bash
-cd VueVideoChat
+cd live-class
 ```
 
 Install dependecies:
