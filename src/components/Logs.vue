@@ -1,15 +1,15 @@
 <template>
-    <div class="col-md-3 box">
-        <div class="log"  v-for="log in logs" v-bind:key="log.id">
-            {{log.message}}
-        </div>
-    </div>
+
 </template>
 
 <script>
+import Vue from 'vue';
+import VueToast from 'vue-toast-notification';
 
 import { EventBus } from '../Event'
 import axios from 'axios'
+
+Vue.use(VueToast);
 
 export default {
   name: "Logs",
@@ -21,9 +21,13 @@ export default {
   },
   created() {
     EventBus.$on('new_log', (message) => {
-        this.logs.push( {id: this.logCount, message: message} );
-
-        this.logCount += 1; 
+        Vue.$toast.open({
+            message: message,
+            type: 'info',
+            duration: 5000
+          });
+        //this.logs.push( {id: this.logCount, message: message} );
+        //this.logCount += 1; 
     })
   },
 }
@@ -34,6 +38,6 @@ export default {
         border: 1px solid rgb(124, 129, 124);
         padding: 13px;
         margin: 3px 0px;
-        color: ghostwhite;
+        color: black;
     }
 </style>

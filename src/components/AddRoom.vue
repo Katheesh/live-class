@@ -1,16 +1,19 @@
 <template>
    <div class="row roomForm">
-       <form class="form-inline" @submit.prevent="createNewRoom(room_name)">
+       <form @submit.prevent="createNewRoom(room_name)">
            <div class="form-group mb-2">
                <input type="text" class="form-control" v-model="room_name" >
            </div>
-           <button type="submit" class="btn btn-primary mb-2 createRoomBotton">Create Room</button>
+           <button type="submit" class="btn btn-primary mb-2">Create Class</button>
        </form>
    </div>
 </template>
 
 <script>
 import { EventBus } from '../Event'
+import Vue from 'vue';
+import VueToast from 'vue-toast-notification';
+Vue.use(VueToast);
 
 export default {
  name: "AddRoom", // Component name
@@ -22,7 +25,10 @@ export default {
  methods: {
    createNewRoom(name) {
        if(!name) {
-         alert("please provide a room name");
+          Vue.$toast.open({
+                message: 'please provide a class name',
+                type: 'error',
+              });
          return
        }
 
@@ -40,11 +46,5 @@ export default {
      margin-top: 30px;
      width: 100%;
  }
- .createRoomBotton {
-   color: #fff;
-   background-color: #4d555f;
-   border-color: #303840;
-   padding: 8px;
-   font-weight: bolder;
- }
+
 </style>

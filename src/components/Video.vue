@@ -1,17 +1,20 @@
 <template>
-   <div class="col-md-6 box">
+   <div  class="content-container">
+    <div class="container-fluid">
        <div class="roomTitle">
            <span v-if="loading"> Loading... {{roomName}}</span>
            <span v-else-if="!loading && roomName"> Connected to {{roomName}}</span>
            <span v-else>Select a room to get started</span>
        </div>
-       <div class="row remote_video_container">
-           <div id="remoteTrack"></div>
-       </div>
-       <div class="spacing"></div>
        <div class="row">
-           <div id="localTrack"></div>
+        <div class="cols-sm-3">
+           <div id="remoteTrack"></div>
+        </div>  
+        <div class="cols-sm-3">
+          <div id="localTrack"></div>
+        </div>        
        </div>
+    </div>
    </div>
 </template>
 
@@ -104,7 +107,7 @@ export default {
 
           Twilio.connect(token , connectOptions).then(function(room) {
               // console.log('Successfully joined a Room: ', room);
-              VueThis.dispatchLog('Successfully joined a Room: '+ room_name);
+              VueThis.dispatchLog('Successfully joined a class: '+ room_name);
 
               // set active toom
               VueThis.activeRoom = room;
@@ -137,7 +140,7 @@ export default {
 
                               // When a Participant leaves the Room, detach its Tracks.
                room.on('participantDisconnected', function(participant) {
-                   VueThis.dispatchLog("Participant '" + participant.identity + "' left the room");
+                   VueThis.dispatchLog("Participant '" + participant.identity + "' left the class");
                    VueThis.detachParticipantTracks(participant);
                });
 
@@ -161,24 +164,20 @@ export default {
 </script>
 
 <style >
-   .remote_video_container {
-     left: 0;
-     margin: 0;
-     border: 1px solid rgb(124, 129, 124);
-   }
    #localTrack video {
-       border: 3px solid rgb(124, 129, 124);
        margin: 0px;
        max-width: 50% !important;
        background-repeat: no-repeat;
    }
-   .spacing {
-     padding: 20px;
-     width: 100%;
-   }
    .roomTitle {
-       border: 1px solid rgb(124, 129, 124);
+      text-align: center;
        padding: 4px;
-       color: dodgerblue;
+       color: black;
    }
+   .content-container {
+      padding-top: 20px;
+    }
+    .content-container {
+      padding-left: 220px;
+    }
 </style>
