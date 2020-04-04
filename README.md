@@ -1,11 +1,11 @@
-# A demo Video chat app using Vue.js
+# This application developed on Twilio Hackathon using Twilio API + Vue.js + nodejs
    
-## Prerequsite
+## Requirements 
 
 To run this project, you need to have:
 
 - [Node.js](https://nodejs.org/) installed on your system
-- A server for generating a token. Clone and install it [here](https://github.com/dongido001/TwilioNodeServer.git).
+- A server for generating a token. Clone and install it [here](https://github.com/Katheesh/live-class.git).
 
 ## Setup
 
