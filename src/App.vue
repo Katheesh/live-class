@@ -1,13 +1,15 @@
 <template>
- <div class="container-fluid chat_container" id="app">
-     <div class="row" v-if="authenticated">
+ <div id="app">
+     <div v-if="authenticated">
        <Rooms />
        <Video :username="username"/>
        <Logs />
      </div>
-     <div class="row" v-else>
+     <div v-else>
        <div class="username">
-          <center><h1>Live Class</h1></center>
+          <center>
+            <img src="./assets/app-logo.png" height="120">
+          <br>
            <form @submit.prevent="submitUsername(username)">
              <div class="form-group mb-2">
                  <input type="text" class="form-control" placeholder="Username" v-model="username" >
@@ -16,7 +18,8 @@
              <div class="form-group mb-2">
                 <button type="submit" class="btn btn-primary mb-2">Enter!</button>
              </div>
-         </form>
+           </form>
+          </center>
        </div>
      </div>
  </div>
@@ -77,7 +80,12 @@ export default {
     border: 1px solid gray;
   }
   .username {
-    margin: 100px auto 7px auto;
+    margin: 150px auto 7px auto;
     color: black;
+  }
+  .form-control{
+    border-radius: 15px; 
+    max-width: 450px;
+    margin-top: 20px;
   }
 </style>

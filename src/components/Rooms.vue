@@ -28,7 +28,7 @@ export default {
        rooms: [
            {id: 1, name: 'Common Class'}
        ],
-       roomCount: 3, // used to keep track of the number of rooms present
+       roomCount: 1, // used to keep track of the number of rooms present
        loading: false, // indicate when tracks in a room is being loaded
    }
  },
@@ -70,7 +70,7 @@ export default {
 .sidebar-logo {
   padding: 10px 15px 10px 30px;
   font-size: 20px;
-  background-color: #2574A9;
+  background-color: #351071;
 }
 
 .sidebar-navigation {
@@ -107,7 +107,7 @@ export default {
 }
 
 .sidebar-navigation li::before {
-  background-color: #2574A9;
+  background-color: #351071;
   position: absolute;
   content: '';
   height: 100%;

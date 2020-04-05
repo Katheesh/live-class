@@ -2,7 +2,7 @@
    <div>
        <form @submit.prevent="createNewRoom(room_name)">
            <div class="form-group mb-2 classForm">
-               <input type="text" class="form-control" placeholder="Enter Class Name" v-model="room_name" >
+               <input type="text" class="form-control" placeholder="Class Name" v-model="room_name" >
            </div>
              <li>
               <a @click="createNewRoom(room_name)"> 
@@ -45,7 +45,6 @@ export default {
 
 <style>
  .classForm{
-  margin-top:15px;
   padding: 10px
   }
  .sidebar-container {
@@ -66,7 +65,7 @@ export default {
 .sidebar-logo {
   padding: 10px 15px 10px 30px;
   font-size: 20px;
-  background-color: #2574A9;
+  background-color: #351071;
 }
 
 .sidebar-navigation {
@@ -103,7 +102,7 @@ export default {
 }
 
 .sidebar-navigation li::before {
-  background-color: #2574A9;
+  background-color: #351071;
   position: absolute;
   content: '';
   height: 100%;

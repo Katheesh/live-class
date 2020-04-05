@@ -1,21 +1,19 @@
 <template>
    <div  class="content-container">
-    <div class="container-fluid">
        <div class="roomTitle">
            <span v-if="loading"> Loading... {{roomName}}</span>
            <span v-else-if="!loading && roomName"> Connected to {{roomName}}</span>
-           <span v-else>Select a room to get started</span>
+           <span v-else>Select a class to get started <br> <img class="banerpic" height="200" src="../assets/app-logo.png"></span>
        </div>
-       <div class="row">
-        <div class="cols-sm-3">
-           <div id="remoteTrack"></div>
-        </div>  
-        <div class="cols-sm-3">
-          <div id="localTrack"></div>
-        </div>        
-       </div>
+         <div class="row">
+           <div class="cols-sm-3">
+             <div class="remotevideoframe" id="remoteTrack"></div>
+           </div>
+           <div class="cols-sm-3">
+              <div class="localvideoframe" id="localTrack"></div>   
+           </div>   
+         </div>       
     </div>
-   </div>
 </template>
 
 <script>
@@ -96,7 +94,7 @@ export default {
               name: room_name,
               // logLevel: 'debug',
               audio: true,
-              video: { width: 400 }
+              video: { width: 200 }
           };
           // before a user enters a new room,
           // disconnect the user from they joined already
@@ -164,20 +162,47 @@ export default {
 </script>
 
 <style >
-   #localTrack video {
-       margin: 0px;
-       max-width: 50% !important;
-       background-repeat: no-repeat;
-   }
-   .roomTitle {
+    .remotevideoframe{
+      position: absolute;
+      height: auto !important;
+      margin-left: 200px;
+      display: inline-block;
+      left: 50px;
+    }
+
+    .localvideoframe{
+      position: absolute;
+      height: auto !important;
+      margin-left: 200px;
+      display: block;
+      right: 20px;
+    }
+    #localTrack video {
+      margin: 0px;
+      max-width: 200px !important;
+      background-repeat: no-repeat; 
+      border-radius: 15px;
+      border: 3px solid #351071;   
+    }
+    #remoteTrack video{
+      margin: 10px;
+      max-width: 200px !important;
+      background-repeat: no-repeat; 
+      border-radius: 15px;
+      border: 3px solid #351071;   
+    }
+    .roomTitle {
       text-align: center;
-       padding: 4px;
-       color: black;
-   }
-   .content-container {
+      padding: 4px;
+      color: black;
+    }
+    .content-container {
       padding-top: 20px;
     }
     .content-container {
       padding-left: 220px;
+    }
+    .banerpic{
+      margin-top: 175px;
     }
 </style>

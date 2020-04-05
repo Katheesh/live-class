@@ -1,4 +1,4 @@
-# This application developed on Twilio Hackathon using Twilio API + Vue.js + nodejs
+# This application has been developed on Twilio Hackathon using Twilio API + Vue.js + nodejs
    
 ## Requirements 
 
@@ -34,3 +34,11 @@ npm run dev
 
 The app should now be accessible from http://localhost:8080
 
+
+## Credits
+
+The app is based on data from : https://twilio.com
+
+## License
+
+MIT © [Katheesh](LICENSE)
