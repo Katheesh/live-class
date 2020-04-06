@@ -1,3 +1,7 @@
+<a  href="https://www.twilio.com">
+<img  src="https://static0.twilio.com/marketing/bundles/marketing/img/logos/wordmark-red.svg"  alt="Twilio"  width="250"  />
+</a>
+
 # This application has been developed on Twilio Hackathon using Twilio API + Vue.js + nodejs #twiliohackathon
 
 ## [Live DEMO https://live-class.netlify.com/#/](https://live-class.netlify.com/#/) 
@@ -79,3 +83,9 @@ The app is based on data from : https://twilio.com
 ## License
 
 MIT © [Katheesh](LICENSE) #twiliohackathon
+
+## Disclaimer
+
+No warranty expressed or implied. Software is as is.
+
+[twilio]: https://www.twilio.com
