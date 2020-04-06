@@ -1,4 +1,6 @@
 # This application has been developed on Twilio Hackathon using Twilio API + Vue.js + nodejs
+
+## [Live DEMO https://live-class.netlify.com/#/](https://live-class.netlify.com/#/)
    
 ## Requirements 
 
@@ -33,6 +35,10 @@ npm run dev
 ```
 
 The app should now be accessible from http://localhost:8080
+
+<p align="center">
+	<img src="src/assets/app-logo.png">
+</p>
 
 
 ## Credits
