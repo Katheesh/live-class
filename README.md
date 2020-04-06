@@ -1,6 +1,6 @@
-# This application has been developed on Twilio Hackathon using Twilio API + Vue.js + nodejs
+# This application has been developed on Twilio Hackathon using Twilio API + Vue.js + nodejs #twiliohackathon
 
-## [Live DEMO https://live-class.netlify.com/#/](https://live-class.netlify.com/#/)
+## [Live DEMO https://live-class.netlify.com/#/](https://live-class.netlify.com/#/) 
    
 ## Requirements 
 
@@ -78,4 +78,4 @@ The app is based on data from : https://twilio.com
 
 ## License
 
-MIT © [Katheesh](LICENSE)
+MIT © [Katheesh](LICENSE) #twiliohackathon
