@@ -9,13 +9,30 @@ To run this project, you need to have:
 - [Node.js](https://nodejs.org/) installed on your system
 - A server for generating a token. Clone and install it [here](https://github.com/Katheesh/live-class.git).
 
-## Setup Vue + Node Server
+## Node Server
 
 Clone the repository:
 
 ``` bash
  git clone https://github.com/Katheesh/live-class.git
 ```
+cd into the nodejs server project:
+``` bash
+cd live-class/Nodejs Server
+```
+Install dependecies:
+
+``` bash
+npm install
+```
+Set up the .evn file variables
+Run the Server!
+
+``` bash
+node server.js
+
+```
+## Setup Vue 
 
 cd into the project:
 ``` bash
@@ -38,6 +55,20 @@ The app should now be accessible from http://localhost:8080
 
 <p align="center">
 	<img src="src/assets/app-logo.png">
+</p>
+
+
+## This Application Some Screenshots
+
+<p align="center">
+	<h3>Homepage</h3>
+	<img src="screenshots/Screenshot1.png"><br>
+	<h3>Dashboard</h3>
+	<img src="screenshots/Screenshot2.png"><br>
+	<h3>Two Users Live</h3>
+	<img src="screenshots/Screenshot3.png"><br>
+	<h3>Three Users Live</h3>
+	<img src="screenshots/Screenshot4.png"><br><br>
 </p>
 
 
